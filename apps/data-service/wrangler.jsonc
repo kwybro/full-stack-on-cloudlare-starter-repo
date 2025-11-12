@@ -15,6 +15,13 @@
 		{
 			"binding": "DB",
 			"database_id": "558222b8-f861-4448-b644-b5f38cef0277",
+			"remote": true, // Able to connect to Cloudflare-deployed DB
+		},
+	],
+	"kv_namespaces": [
+		{
+			"binding": "CACHE",
+			"id": "a34140566e5243128bff18487b0effb3",
 			"remote": true,
 		},
 	],
