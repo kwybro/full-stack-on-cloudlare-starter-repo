@@ -29,6 +29,9 @@ importers:
       moment:
         specifier: ^2.30.1
         version: 2.30.1
+      uuid:
+        specifier: ^11.1.0
+        version: 11.1.0
       workers-ai-provider:
         specifier: ^0.7.1
         version: 0.7.1(zod@3.25.67)

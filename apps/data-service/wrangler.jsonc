@@ -18,6 +18,13 @@
 			"remote": true, // Able to connect to Cloudflare-deployed DB
 		},
 	],
+	"workflows": [
+		{
+			"name": "destination-evaluation-workflow",
+			"binding": "DESTINATION_EVALUATION_WORKFLOW",
+			"class_name": "DestinationEvaluationWorkflow",
+		},
+	],
 	"kv_namespaces": [
 		{
 			"binding": "CACHE",
@@ -42,4 +49,16 @@
 			},
 		],
 	},
+	"ai": {
+		"binding": "AI"
+	},
+	"r2_buckets": [
+		{
+			"binding": "BUCKET",
+			"bucket_name": "smart-links-eval-stage",
+		}
+	],
+	"browser": {
+		"binding": "VIRTUAL_BROWSER"
+	}
 }
