@@ -4,7 +4,7 @@ import { z } from "zod";
 import { getEvaluations, getNotAvailableEvaluations } from "@repo/data-ops/queries/evaluations";
 
 export const evaluationsTrpcRoutes = t.router({
-  problematicDestinations: t.procedure.query(async ({ ctx }) => {
+  problematicDestinations: t.procedure.query(async () => {
     return await getNotAvailableEvaluations('123');
   }),
   recentEvaluations: t.procedure
@@ -15,7 +15,7 @@ export const evaluationsTrpcRoutes = t.router({
         })
         .optional(),
     )
-    .query(async ({ ctx }) => {
+    .query(async () => {
       const evaluations = await getEvaluations('123');
 
       const oldestCreatedAt =
